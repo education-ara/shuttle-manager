@@ -98,10 +98,10 @@ const PayrollCalculator = {
     // 출근 시간 보정 (최대 20분 전까지만 인정)
     adjustCheckInTime: function(checkInTime, firstBusTime) {
         const diff = DateUtils.timeDiffInMinutes(checkInTime, firstBusTime);
-        if (diff > 20) {
-            // firstBusTime에서 20분 뺀 시간 계산
+        if (diff > 10) {
+            // firstBusTime에서 10분 뺀 시간 계산
             const [h, m] = firstBusTime.split(':').map(Number);
-            const adjustedMinutes = (h * 60 + m) - 20;
+            const adjustedMinutes = (h * 60 + m) - 10;
             const adjustedHours = Math.floor(adjustedMinutes / 60);
             const adjustedMins = adjustedMinutes % 60;
             return `${String(adjustedHours).padStart(2, '0')}:${String(adjustedMins).padStart(2, '0')}`;
