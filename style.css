@@ -1,0 +1,160 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200');
+
+:root {
+  --font-headline: 'Manrope', sans-serif;
+  --font-body: 'Inter', sans-serif;
+  --primary-color: #8D715E;
+  --secondary-color: #83746B;
+  --accent-color: #939274;
+  --tertiary-color: #7B7674;
+  --bg-color: #f8f6f4;
+  --text-color: #000000;
+  --border-color: #8D715E;
+  --success-color: #939274;
+  --warning-color: #83746B;
+  --error-color: #7B7674;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  line-height: 1.6;
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--font-headline);
+}
+
+.material-symbols-outlined {
+  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+  vertical-align: middle;
+  user-select: none;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.header h1 {
+  font-size: 2.5rem;
+  color: var(--primary-color);
+  margin-bottom: 10px;
+}
+
+.header p {
+  font-size: 1.1rem;
+  color: var(--tertiary-color);
+}
+
+.role-selection {
+  text-align: center;
+}
+
+.role-selection h2 {
+  font-size: 1.8rem;
+  margin-bottom: 30px;
+  color: var(--text-color);
+}
+
+.role-cards {
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.role-card {
+  background: white;
+  border-radius: 16px;
+  padding: 40px 30px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  border: 2px solid transparent;
+  min-width: 250px;
+}
+
+.role-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+}
+
+.role-card span {
+  font-size: 3rem;
+  margin-bottom: 15px;
+  display: block;
+}
+
+.role-card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+.role-card p {
+  color: #666;
+  font-size: 1rem;
+}
+
+.teacher-role {
+  border-color: var(--primary-color);
+}
+
+.teacher-role:hover {
+  background: linear-gradient(135deg, var(--bg-color) 0%, #e8e2dd 100%);
+}
+
+.admin-role {
+  border-color: var(--secondary-color);
+}
+
+.admin-role:hover {
+  background: linear-gradient(135deg, var(--bg-color) 0%, #d4ccc7 100%);
+}
+
+/* 반응형 디자인 */
+@media (max-width: 768px) {
+  .container {
+    padding: 15px;
+  }
+  
+  .header h1 {
+    font-size: 2rem;
+  }
+  
+  .role-cards {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .role-card {
+    min-width: 280px;
+    padding: 30px 25px;
+  }
+}
+
+@media (max-width: 480px) {
+  .header h1 {
+    font-size: 1.8rem;
+  }
+  
+  .role-card {
+    min-width: 250px;
+    padding: 25px 20px;
+  }
+}
