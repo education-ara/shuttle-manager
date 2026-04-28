@@ -1,5 +1,10 @@
 // 애플리케이션 메인 JavaScript
+// Supabase 설정
+const SUPABASE_URL = 'https://dskgksbqesmzhsqyhehv.supabase.co';   // 본인 URL
+const SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImRza2drc2JxZXNtemhzcXloZWh2Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzczMjcxMDUsImV4cCI6MjA5MjkwMzEwNX0.AJDE5WmvbWRcJm8C-cyJv4kmlzc79hIavtgFYaRihMI';                     // 본인 anon key
 
+const { createClient } = supabase;
+const db = createClient(SUPABASE_URL, SUPABASE_KEY);
 // 역할 선택 함수
 function selectRole(role) {
     if (role === 'teacher') {
